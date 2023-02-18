@@ -9,10 +9,12 @@ class PlacesController < ApplicationController
         @posts = Post.where({"place_id" => @place["id"] })
     end
 
+
     def new
         @place = Place.new
     end
 
+    
     def create
         @place = Place.new
         @place["name"] = params["place"]["name"]
